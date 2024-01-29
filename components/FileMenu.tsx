@@ -9,11 +9,11 @@ import Link from "next/link";
 
 const FileMenu = ({ genres }: { genres: Genre[] }) => {
 	return (
-		<div className=' hidden lg:flex  justify-between '>
+		<div className=' hidden lg:flex  justify-between z-50 overflow-x-scroll transition-all duration-150 delay-150 ease-in-out'>
 			{genres.map((genre) => (
 				<Tabs
 					key={genre.id}
-					className='flex gap-2 bg-transparent'>
+					className='flex gap-2 bg-transparent '>
 					<TabsList className='flex items-center bg-transparent '>
 						<TabsTrigger value={genre.name}>
 							<Link

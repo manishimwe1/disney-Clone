@@ -1,5 +1,6 @@
 import FileMenu from "@/components/FileMenu";
 import MenuBar from "@/components/FileMenu";
+import WrraperBg from "@/components/WrraperBg";
 import { Button } from "@/components/ui/button";
 import { getImagePath } from "@/lib/getImagePath";
 import {
@@ -22,10 +23,11 @@ const page = async ({ searchParams: { p } }: Props) => {
 	// console.log(p);
 
 	return (
-		<div className='flex flex-col gap-2  mt-36 mx-auto'>
+		<div className='flex flex-col gap-2 mx-auto'>
+			<WrraperBg />
 			<FileMenu genres={genres} />
-			<div className=' w-full space-y-4 '>
-				<div className='grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-7 gap-3 justify-center items-center w-full px-4'>
+			<div className=' w-full space-y-4 -mt-28 sm:-mt-0'>
+				<div className='grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-9 xl:text-xl gap-3 justify-center items-center w-full px-4'>
 					{tvSeries.map((tvSerie) => (
 						<Link
 							key={tvSerie.id}

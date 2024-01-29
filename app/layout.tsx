@@ -1,11 +1,10 @@
+import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { getGenresOfMovie } from "@/lib/getMovies";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { getGenresOfMovie } from "@/lib/getMovies";
-import Header from "@/components/Header";
-import { Genres } from "@/typings";
 
 const inter = Inter({ subsets: ["latin"] });
 

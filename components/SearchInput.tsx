@@ -29,6 +29,7 @@ const SearchInput = () => {
 	});
 	function onSubmit(values: z.infer<typeof formSchema>) {
 		router.push(`/search/${values.input}`);
+		// console.log(values);
 		form.reset();
 	}
 
@@ -36,7 +37,7 @@ const SearchInput = () => {
 		<Form {...form}>
 			<form
 				onSubmit={form.handleSubmit(onSubmit)}
-				className='space-y-8'>
+				className='space-y-8 w-[130px]'>
 				<FormField
 					control={form.control}
 					name='input'
@@ -46,6 +47,7 @@ const SearchInput = () => {
 								<Input
 									placeholder='Search...'
 									{...field}
+									className='placeholder:text-xs md:placeholder:text-sm'
 								/>
 							</FormControl>
 						</FormItem>

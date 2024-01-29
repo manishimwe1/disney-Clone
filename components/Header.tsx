@@ -18,9 +18,9 @@ const Header = ({
 	return (
 		<header
 			className={cn(
-				"fixed w-full z-50 top-0 flex items-center justify-between p-5 bg-gradient-to-t from-gray-900/10 via-gray-900/25 to-gray-900",
+				"fixed w-full z-50 top-0 flex items-center gap-10 justify-between p-5 bg-gradient-to-t from-[#1a1c29]/10 via-[#1a1c29]/25 to-[#1a1c29]",
 			)}>
-			<Link href={"/"} className='mr-10'>
+			<Link href={"/"} className='mr-10 flex-1'>
 				<Image
 					src={
 						"https://links.papareact.com/a943ae"
@@ -58,7 +58,7 @@ const Header = ({
 					);
 				})}
 			</ul>
-			<div className='flex space-x-2'>
+			<div className='flex space-x-2 items-center '>
 				<GenreDropdown genre={genreMovies} />
 				<SearchInput />
 				<DarkModeToggle />

@@ -12,7 +12,7 @@ export default async function Home() {
 	const popularMovies = await getPopularMovies();
 
 	return (
-		<h1>
+		<div className=''>
 			<CarouselBannerWrapper />
 			<div className='flex flex-col space-y-2 xl:mt-48'>
 				<MoviesCarousel
@@ -28,6 +28,6 @@ export default async function Home() {
 					title='Popular'
 				/>
 			</div>
-		</h1>
+		</div>
 	);
 }
